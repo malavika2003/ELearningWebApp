@@ -17,7 +17,7 @@
 Welcome page.....
 helLOO ${username}<br>
 <a href= "videos.jsp">Videos here</a>
-<form action="Logout">
+<form action="/ELearningWebApp/Logout">
 <input type="submit" value= "Log out">
 </form>
 

@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<form action="Login" method="post">
+<form action="/ELearningWebApp/Login" method="post">
 Enter username :<input type="text" name= "Username"><br>
 Enter password :<input type="password" name= "Userpassword"><br>
 <input type="submit" value="login">

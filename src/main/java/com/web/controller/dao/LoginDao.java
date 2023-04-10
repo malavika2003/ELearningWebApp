@@ -20,7 +20,7 @@ public class LoginDao {
 			PreparedStatement st=con.prepareStatement(sql);
 			st.setString(1,Username);
 			st.setString(2,Userpassword);
-			ResultSet rs=st.executeQuery(sql);
+			ResultSet rs=st.executeQuery();
 			if(rs.next())
 			{
 				return true;
