@@ -30,20 +30,22 @@ public class Login extends HttpServlet {
 		
 		String Username=request.getParameter("Username");
 		String Userpassword=request.getParameter("Userpassword");
+		Integer userId = -1;
 		
 		LoginDao dao=new LoginDao();
 		
 		
-		if(dao.check(Username, Userpassword))
+		if((userId = dao.check(Username, Userpassword)) > 0)
 		{
 			HttpSession session=request.getSession();
 			session.setAttribute("username", Username);
+			session.setAttribute("userId", userId);
 			response.sendRedirect("jspfiles/welcome.jsp");
 		}
 		else
 		{
 			
-			response.sendRedirect("login.jsp");
+			response.sendRedirect("jspfiles/login.jsp");
 			
 		}
 	}
