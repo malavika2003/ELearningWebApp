@@ -5,32 +5,30 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+import com.db.util.DBUtil;
+
 public class LoginDao {
-	String sql="select Username ,Userpassword from accounts where Username=? and Userpassword=?";
-	String url="jdbc:mysql://localhost:3306/elearningweb";
-	String username="root";
-	String password="Malu1693*";
+	String sql="select Userid, Username ,Userpassword from accounts where Username=? and Userpassword=?";
 	
-	public boolean check(String Username,String Userpassword)
+	public Integer check(String Username,String Userpassword)
 	{
-		
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
-			Connection con=DriverManager.getConnection(url,username,password);
+
+			Connection con= DBUtil.getInstance().getConnection();
 			PreparedStatement st=con.prepareStatement(sql);
 			st.setString(1,Username);
 			st.setString(2,Userpassword);
 			ResultSet rs=st.executeQuery();
 			if(rs.next())
 			{
-				return true;
+				return rs.getInt("Userid");
 			}
 			
 		} catch (Exception e) {
 		
 			e.printStackTrace();
 		}
-		return false;
+		return -1;
 	}
 
 }
