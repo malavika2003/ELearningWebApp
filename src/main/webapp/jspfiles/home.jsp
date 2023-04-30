@@ -6,13 +6,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- font awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-  <!--Import Google Icon Font-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-  <title>Home</title>
+   <title>Home</title>
+   <jsp:include page="header.jsp" />
   <style>
     header{
       background: url(../images/bgimage.jpg);
@@ -39,6 +34,9 @@
 </head>
 <body>
 
+<% 
+	response.setHeader("Cache-control","no-cache, no-store, must-revalidate");
+	boolean isLoggedIn = session.getAttribute("username") != null; %>
   <!-- navbar -->
   <header>
     <nav class="nav-wrapper transparent">
@@ -49,24 +47,23 @@
         </a>
         <ul class="right hide-on-med-and-down">
           <li><a href="home.jsp">Home</a></li>
-          <li><a href= "welcome.jsp">Courses</a></li>
+          <li><a href= "classes.jsp">Classes</a></li>
+          <li><a href= "Courses.jsp">Courses</a></li>
           <li><a href= "aboutus.jsp">About us</a> 
-          <li><a href= "contact.jsp">Contact</a>           
-          <li><a href="#" class="tooltipped btn-floating btn-small indigo darken-4" data-position="bottom" data-tooltip="Instagram"> 
-            <i class="fab fa-instagram"></i>
-          </a></li>
-          <li><a href="#" class="tooltipped btn-floating btn-small indigo darken-4" data-position="bottom" data-tooltip="Facebook">
-            <i class="fab fa-facebook"></i>
-          </a></li>
-          <li><a href="#" class="tooltipped btn-floating btn-small indigo darken-4" data-position="bottom" data-tooltip="Twitter">
-            <i class="fab fa-twitter"></i>
-          </a></li>
+                   
+          <li><a class="waves-effect waves-light btn-small lime darken-4" href= <%= isLoggedIn ? "/ELearningWebApp/Logout" : "login.jsp" %>><%=  isLoggedIn? "Logout" : "Login"  %></a></li>
+          
+        
+                  
+          
         </ul>
         <ul class="sidenav grey lighten-2" id="mobile-menu">
            <li><a href="home.jsp">Home</a></li>
-          <li><a href= "welcome.jsp">Courses</a></li>
+           <li><a href= "classes.jsp">Classes</a></li>
+           <li><a href= "Courses.jsp">Courses</a></li>
           <li><a href= "aboutus.jsp">About us</a> 
-          <li><a href= "contact.jsp">Contact</a> </li>
+          
+          <li><a href= <%= isLoggedIn ? "/ELearningWebApp/Logout" : "login.jsp" %>><%= isLoggedIn ? "Logout" : "Login" %></a></li>
         </ul>
       </div>
     </nav>
@@ -140,7 +137,7 @@
         </div>
         </div>
       </div>
-    </div>
+ 
   </section>
 
   <!-- parallax -->
@@ -226,8 +223,8 @@
   </footer>
 
   <!-- Compiled and minified JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <jsp:include page="footer.jsp" />
+  
   <script>
     $(document).ready(function(){
 
