@@ -6,12 +6,17 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Courses</title>
-  
+  <style>
+  .card-image{
+    height: 350px; /* Your height here */
+    overflow: hidden;
+}
+  </style>
 </head>
-<body>
+<body style ="background-color: #e1f5fe ">
  <jsp:include page="header.jsp" />
 <nav>
-  <div class="nav-wrapper">
+  <div class="nav-wrapper  teal accent-4">
      <a href="#" class="brand-logo">E-Learning WebApp</a>
       <a href="#" class="sidenav-trigger" data-target="mobile-menu">
           <i class="material-icons">menu</i>
@@ -26,35 +31,49 @@
     </ul>
   </div>
 </nav>   
+
 <%
-Map<String, List<String>> sublist=CoursesDAO.getInstance().getCourses();
-for (Map.Entry<String, List<String>> entry: sublist.entrySet()){
+Map<String, List<Map<String,String>>> sublist=CoursesDAO.getInstance().getCourses();
+for (Map.Entry<String, List<Map<String,String>>> entry: sublist.entrySet()){
+	%>
+	    
+	
+	<%
 	String subname=entry.getKey();
 	%>
+	<br>
 	<h3><%=subname%></h3>
+		<div class="row">
+	
 	<%
-	for(String subs:entry.getValue()){
-		
+	for(Map<String,String> subs:entry.getValue()){
+		Map.Entry<String,String> subMap = subs.entrySet().iterator().next();
 %>
-<div class="row">
-    <div class="col s12 m6">
-      <div class="card blue-grey darken-1">
-        <div class="card-content white-text">
+<div class="col s6 m6 l5 xl6">
+
+      <div class="card ">
+      <p class="z-depth-5"></p>
+        <div class="card-image">
+        <img class="responsive-img" src= "<%=subMap.getValue() %>">
         
-          <span class="card-title"><%=subs %></span>
+          <span class="card-title "><%=subMap.getKey()%></span>
           
         </div>
         <div class="card-action">
          
-          <a href="../SubscribeServlet?subName=<%=subs %>">Subscribe</a>
+          <a href="../SubscribeServlet?subName=<%=subMap.getKey() %>">Subscribe</a>
           
           
           
         </div>
       </div>
     </div>
-  </div>
-  <% }} %>
+  <% }
+	%>
+	    </div>
+	 
+	<%} %>
+  
  <jsp:include page="footer.jsp" />
 </body>
 </html>

@@ -24,28 +24,34 @@ public class CoursesDAO {
 
 		}
 	}
-	public Map<String, List<String>> getCourses()
+	public Map<String, List<Map<String,String>>> getCourses()
 	{
-		Map<String, List<String>> coursesMap = new HashMap<>();
+		Map<String, List<Map<String,String>>> coursesMap = new HashMap<>();
 		
-		String sql="select ClassName,subName from classes inner join subjects on subjects.Classid =classes.Classid";
+		String sql="select ClassName,subName,imagesrc from classes inner join subjects on subjects.Classid =classes.Classid";
 		try {
 			Connection connection=DBUtil.getInstance().getConnection();
 			
 			PreparedStatement ps= connection.prepareStatement(sql);
 			ResultSet rs=ps.executeQuery();
+			
+
 			while(rs.next())
 			{
 				
 				if(coursesMap.containsKey(rs.getString(1)))
 				{
 					
-					List<String> subjects=coursesMap.get(rs.getString(1));
-					subjects.add(rs.getString(2));				
+					List<Map<String,String>> subjects=coursesMap.get(rs.getString(1));
+					Map<String,String> subMap = new HashMap<>();
+					subMap.put(rs.getString(2), rs.getString(3));
+					subjects.add(subMap);				
 				}
 				else {
-				      List<String>subjects=	new ArrayList<String>();
-				      subjects.add(rs.getString(2));
+				      List<Map<String,String>>subjects=	new ArrayList<>();
+				      Map<String,String> subMap = new HashMap<>();
+					  subMap.put(rs.getString(2), rs.getString(3));
+				      subjects.add(subMap);
 					coursesMap.put(rs.getString(1), subjects);
 				}
 			}
