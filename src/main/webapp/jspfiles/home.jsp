@@ -73,29 +73,29 @@
   <section class="container section scrollspy" id="photos">
     <div class="row">
       <div class="col s12 l4">
-          <img src="img/portrait.jpg" alt="" class="responsive-img materialboxed">
+          <img src="../images/lovelearn.jpg" alt="" class="responsive-img materialboxed">
       </div>
       <div class="col s12 l6 offset-l1">
-        <h2 class="indigo-text text-darken-4">Portraits</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at lacus congue, suscipit elit nec, tincidunt orci.</p>
+        <h2 class="indigo-text text-darken-4">Personalized learning</h2>
+        <p>Students practice at their own pace, first filling in gaps in their understanding and then accelerating their learning.</p>
       </div>
     </div>
     <div class="row">
       <div class="col s12 l4 offset-l1 push-l7">
-          <img src="img/city.jpg" alt="" class="responsive-img materialboxed">
+          <img src="../images/tablearn.jpg" alt="" class="responsive-img materialboxed">
       </div>
       <div class="col s12 l6 offset-l1 pull-l5 right-align">
-        <h2 class="indigo-text text-darken-4">Cityscapes</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at lacus congue, suscipit elit nec, tincidunt orci.</p>
+        <h2 class="indigo-text text-darken-4">Computer Managed Learning</h2>
+        <p>Computers are the teachers, as they have the role of accessing and managing the individual's learning progress. Education is the key to the mental, physical, spiritual, and social development of humans.</p>
       </div>
     </div>
     <div class="row">
       <div class="col s12 l4">
-          <img src="img/nature.jpg" alt="" class="responsive-img materialboxed">
+          <img src="../images/eduimage.jpg" alt="" class="responsive-img materialboxed">
       </div>
       <div class="col s12 l6 offset-l1">
-        <h2 class="indigo-text text-darken-4">Nature</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at lacus congue, suscipit elit nec, tincidunt orci.</p>
+        <h2 class="indigo-text text-darken-4">Linear E-Learning</h2>
+        <p>The learning material is passing from sender to receiver without two-way communication between teachers and students.</p>
       </div>
     </div>
   </section>
@@ -103,7 +103,7 @@
   <!-- parallax -->
   <div class="parallax-container">
     <div class="parallax">
-      <img src="img/street.jpg" alt="" class="responsive-img">
+      <img src="../images/children.jpg" alt="" class="responsive-img">
     </div>
   </div>
 
@@ -218,7 +218,7 @@
       </div>
     </div>
     <div class="footer-copyright grey darken-4">
-      <div class="container center-align">&copy; 2018 Photo Ninja</div>
+      <div class="container center-align">&copy;</div>
     </div>
   </footer>
 
