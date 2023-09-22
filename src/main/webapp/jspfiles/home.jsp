@@ -111,29 +111,31 @@
   <section class="section container scrollspy" id="services">
     <div class="row">
       <div class="col s12 l4">
-        <h2 class="indigo-text text-darken-4">What I do..</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at lacus congue, suscipit elit nec, tincidunt orci.</p>
-        <p>Mauris dolor augue, vulputate in pharetra ac, facilisis nec libero. Fusce condimentum gravida urna, vitae scelerisque erat ornare nec.</p>
+        <h2 class="indigo-text text-darken-4">Why we need education?</h2>
+        <p>Learning is not attained by chance, it must be sought for with ardor and attended to with diligence</p>
+        <p>Education is the passport to the future, for tomorrow belongs to those who prepare for it today.</p>
       </div>
       <div class="col s12 l6 offset-l2">
         <!-- tabs -->
         <ul class="tabs">
           <li class="tab col s6">
-            <a href="#photography" class="active indigo-text text-darken-4">Photography</a>
+            <a href="#photography" class="active indigo-text text-darken-4">Computer Science Facts</a>
           </li>
           <li class="tab col s6">
-            <a href="#editing" class="indigo-text text-darken-4">Editing</a>
+            <a href="#editing" class="indigo-text text-darken-4">Science Facts</a>
           </li>
         </ul>
         <div id="photography" class="col s12">
-            <p class="flow-text indigo-text text-darken-4">Photography</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at lacus congue, suscipit elit nec, tincidunt orci.</p>
-            <p>Mauris dolor augue, vulputate in pharetra ac, facilisis nec libero. Fusce condimentum gravida urna, vitae scelerisque erat ornare nec.</p>
+            <p class="flow-text indigo-text text-darken-4">Computer Science Facts</p>
+           <p> The first computer game, "Spacewar!", was invented in 1962.</p>
+                      <p>The first computer, known as the ENIAC, weighed 30 tons and took up an entire room.
+                       </p>
+           
         </div>
         <div id="editing" class="col s12">
-            <p class="flow-text indigo-text text-darken-4">Editing</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at lacus congue, suscipit elit nec, tincidunt orci.</p>
-            <p>Mauris dolor augue, vulputate in pharetra ac, facilisis nec libero. Fusce condimentum gravida urna, vitae scelerisque erat ornare nec.</p>
+            <p class="flow-text indigo-text text-darken-4">Science Fact</p>
+             <p>Science is the acceptance of what works and the rejection of what does not. That needs more courage than we might think.</p>
+            <p>There is no law except the law that there is no law.</p>
         </div>
         </div>
       </div>
@@ -143,7 +145,7 @@
   <!-- parallax -->
   <div class="parallax-container">
     <div class="parallax">
-      <img src="img/stars.jpg" alt="" class="responsive-img">
+      <img src="../images/neverstoplearning.jpg" alt="" class="responsive-img">
     </div>
   </div>
 
@@ -151,11 +153,15 @@
   <section class="section container scrollspy" id="contact">
     <div class="row">
       <div class="col s12 l5">
-        <h2 class="indigo-text text-darken-4">Get in Touch</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at lacus congue, suscipit elit nec, tincidunt orci.</p>
-        <p>Mauris dolor augue, vulputate in pharetra ac, facilisis nec libero. Fusce condimentum gravida urna, vitae scelerisque erat ornare nec.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at lacus congue, suscipit elit nec, tincidunt orci.</p>
-        <p>Mauris dolor augue, vulputate in pharetra ac, facilisis nec libero. Fusce condimentum gravida urna, vitae scelerisque erat ornare nec.</p>
+        <h2 class="indigo-text text-darken-4">Quotes</h2>
+        <p>The roots of education are bitter, but the fruit is sweet.</p>
+
+<p>It is not what is poured into a student that counts but what is planted. </p>
+
+<p>An investment in knowledge plays the  best interest.</p>
+
+
+<p>Education is the key that unlocks the golden door to freedom.</p>
       </div>
       <div class="col s12 l5 offset-l2">
         <form>
@@ -179,13 +185,13 @@
             <p>
               <label>
                 <input type="checkbox">
-                <span>Photography</span>
+                <span></span>
               </label>
             </p>
             <p>
               <label>
                 <input type="checkbox">
-                <span>Photo Editing</span>
+                <span></span>
               </label>
             </p>
           </div>
